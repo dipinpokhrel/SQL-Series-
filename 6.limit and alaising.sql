@@ -36,4 +36,4 @@ limit 4,3;
 from employee_demographics
 order by a DESC
 limit 4,1;
--- what alasing does is rename the column name for ease to the user 
+-- What aliasing does is rename the column for the user's convenience.
