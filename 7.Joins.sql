@@ -57,3 +57,22 @@ from employee_demographics as demo
 RIGHT JOIN employee_salary  as sal
 ON  demo.first_name=sal.first_name;
 
+
+/*  self join
+A self-join is a join in SQL where a table is joined with itself. It is often used to query 
+hierarchical data or find relationships within the same table. To perform a self-join,
+you use aliases to differentiate between the "instances" of the table involved in the join.
+*/
+SELECT *  
+FROM employee_salary  as emp1
+JOIN  employee_salary as emp2
+ON emp1.employee_id+1=emp2.employee_id; -- what this does is the ids of employee salary table are assined to work with next  ids
+
+
+-- JOINING MULTIPLE AT A TIME 
+SELECT * 
+from employee_demographics as de
+join employee_salary as sa
+ON de.employee_id=sa.employee_id
+inner join parks_departments;
+
